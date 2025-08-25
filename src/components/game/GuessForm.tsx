@@ -29,26 +29,26 @@ export const GuessForm = ({ characters, onGuess, isLoading }: GuessFormProps) =>
   };
 
   return (
-    <Card className="w-full max-w-xl mx-auto p-6 bg-card border-2 border-secondary shadow-pixel animate-scale-in">
+    <Card className="w-full max-w-xl mx-auto p-6 bg-card pixel-border-thick shadow-pixel-thick animate-scale-in">
       <div className="space-y-6">
         <div className="text-center">
           <div className="flex items-center justify-center gap-2 mb-2">
-            <div className="p-2 bg-secondary text-secondary-foreground shadow-pixel">
+            <div className="p-2 bg-secondary text-secondary-foreground shadow-pixel pixel-border">
               <Users className="w-5 h-5" />
             </div>
-            <h3 className="text-lg font-pixel text-secondary text-glow uppercase">MAKE GUESS</h3>
+            <h3 className="text-lg font-pixel text-secondary text-outline uppercase font-bold">MAKE GUESS</h3>
           </div>
-          <p className="text-xs font-pixel text-muted-foreground uppercase">FILTER AND CHOOSE</p>
+          <p className="text-xs font-pixel text-card-foreground uppercase font-bold">FILTER AND CHOOSE</p>
         </div>
 
         <div className="space-y-4">
           <div>
-            <label className="text-xs font-pixel text-foreground mb-2 block uppercase">GENDER:</label>
+            <label className="text-xs font-pixel text-card-foreground mb-2 block uppercase font-bold">GENDER:</label>
             <Select value={genderFilter} onValueChange={(value: 'all' | 'male' | 'female') => setGenderFilter(value)}>
-              <SelectTrigger className="border-2 border-border bg-input shadow-pixel font-pixel">
+              <SelectTrigger className="pixel-border-thick bg-input shadow-pixel font-pixel">
                 <SelectValue />
               </SelectTrigger>
-              <SelectContent className="border-2 border-border bg-card shadow-pixel">
+              <SelectContent className="pixel-border-thick bg-card shadow-pixel">
                 <SelectItem value="all" className="font-pixel">ALL CHARACTERS</SelectItem>
                 <SelectItem value="male" className="font-pixel">MEN</SelectItem>
                 <SelectItem value="female" className="font-pixel">WOMEN</SelectItem>
@@ -57,12 +57,12 @@ export const GuessForm = ({ characters, onGuess, isLoading }: GuessFormProps) =>
           </div>
 
           <div>
-            <label className="text-xs font-pixel text-foreground mb-2 block uppercase">CHARACTER:</label>
+            <label className="text-xs font-pixel text-card-foreground mb-2 block uppercase font-bold">CHARACTER:</label>
             <Select value={selectedName} onValueChange={setSelectedName}>
-              <SelectTrigger className="border-2 border-border bg-input shadow-pixel font-pixel">
+              <SelectTrigger className="pixel-border-thick bg-input shadow-pixel font-pixel">
                 <SelectValue placeholder="SELECT CHARACTER..." />
               </SelectTrigger>
-              <SelectContent className="max-h-60 border-2 border-border bg-card shadow-pixel">
+              <SelectContent className="max-h-60 pixel-border-thick bg-card shadow-pixel">
                 {filteredCharacters.map((character) => (
                   <SelectItem key={character.name} value={character.name} className="font-pixel">
                     {character.name.toUpperCase()}

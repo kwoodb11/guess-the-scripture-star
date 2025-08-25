@@ -11,17 +11,17 @@ interface ClueCardProps {
 
 export const ClueCard = ({ clue, clueNumber, onAnotherClue, isLoading }: ClueCardProps) => {
   return (
-    <Card className="w-full max-w-2xl mx-auto p-6 bg-card border-2 border-primary shadow-pixel scanlines animate-fade-in">
+    <Card className="w-full max-w-2xl mx-auto p-6 bg-card pixel-border-thick shadow-pixel-thick animate-fade-in">
       <div className="text-center space-y-6">
         <div className="flex items-center justify-center gap-3 mb-4">
-          <div className="p-2 bg-primary text-primary-foreground shadow-pixel animate-neon-glow">
+          <div className="p-2 bg-primary text-primary-foreground shadow-pixel pixel-border">
             <Lightbulb className="w-6 h-6" />
           </div>
-          <h2 className="text-lg font-pixel text-primary text-glow uppercase">CLUE #{clueNumber}</h2>
+          <h2 className="text-lg font-pixel text-primary text-outline uppercase font-bold">CLUE #{clueNumber}</h2>
         </div>
         
-        <div className="bg-muted border-2 border-secondary p-6 shadow-pixel">
-          <p className="text-sm font-pixel leading-relaxed text-foreground">
+        <div className="bg-input pixel-border-thick p-6 shadow-pixel">
+          <p className="text-sm font-pixel leading-relaxed text-foreground font-bold">
             {clue}
           </p>
         </div>

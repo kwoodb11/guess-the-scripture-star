@@ -6,89 +6,79 @@
 
 @layer base {
   :root {
-    /* Retro Pixel Color Palette */
-    --background: 220 15% 8%;
-    --foreground: 60 100% 95%;
+    /* Canva Retro Quiz Color Palette */
+    --background: 180 100% 70%; /* Bright cyan like the template */
+    --foreground: 240 100% 15%; /* Dark blue for text */
 
-    --card: 220 25% 12%;
+    --card: 120 60% 45%; /* Green grass color */
     --card-foreground: 60 100% 95%;
 
-    --popover: 220 25% 12%;
+    --popover: 120 60% 45%;
     --popover-foreground: 60 100% 95%;
 
-    /* Neon Green Primary (Classic arcade) */
-    --primary: 120 100% 50%;
-    --primary-foreground: 220 15% 8%;
-    --primary-glow: 120 100% 70%;
+    /* Yellow text like "QUIZ TIME" */
+    --primary: 45 100% 50%;
+    --primary-foreground: 240 100% 15%;
+    --primary-glow: 45 100% 70%;
 
-    /* Electric Blue Secondary */
-    --secondary: 200 100% 60%;
-    --secondary-foreground: 220 15% 8%;
+    /* Red hearts/buttons */
+    --secondary: 0 100% 55%;
+    --secondary-foreground: 60 100% 95%;
 
-    /* Dark Retro Neutrals */
-    --muted: 220 20% 15%;
-    --muted-foreground: 60 50% 75%;
+    /* Blue mountains/dark elements */
+    --muted: 220 60% 30%;
+    --muted-foreground: 60 50% 85%;
 
-    --accent: 280 100% 70%;
-    --accent-foreground: 220 15% 8%;
+    --accent: 300 100% 70%; /* Purple accent */
+    --accent-foreground: 240 100% 15%;
 
     --destructive: 0 100% 60%;
     --destructive-foreground: 60 100% 95%;
 
-    --border: 120 100% 25%;
-    --input: 220 25% 12%;
-    --ring: 120 100% 50%;
+    --border: 240 100% 15%; /* Black borders like the template */
+    --input: 60 100% 95%;
+    --ring: 45 100% 50%;
 
     --radius: 0px; /* Sharp pixel corners */
 
     /* Retro Game Colors */
-    --game-success: 120 100% 50%;
-    --game-warning: 45 100% 60%;
-    --game-info: 200 100% 60%;
-    --game-danger: 0 100% 60%;
+    --game-success: 120 60% 45%; /* Green */
+    --game-warning: 45 100% 50%; /* Yellow */
+    --game-info: 200 100% 60%; /* Blue */
+    --game-danger: 0 100% 55%; /* Red */
     
     /* Pixel Gradients */
-    --gradient-neon: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-cyber: linear-gradient(135deg, hsl(var(--secondary)), hsl(280 100% 70%));
-    --gradient-dark: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+    --gradient-cyan: linear-gradient(135deg, hsl(180 100% 70%), hsl(180 100% 80%));
+    --gradient-green: linear-gradient(135deg, hsl(120 60% 45%), hsl(120 60% 55%));
+    --gradient-yellow: linear-gradient(135deg, hsl(45 100% 50%), hsl(45 100% 60%));
     
-    /* Pixel Shadows & Glows */
-    --shadow-neon: 0 0 20px hsl(var(--primary) / 0.8), 0 0 40px hsl(var(--primary) / 0.4);
-    --shadow-pixel: 4px 4px 0px hsl(220 100% 25%);
-    --shadow-deep: 6px 6px 0px hsl(220 100% 15%);
+    /* Pixel Shadows & Borders */
+    --shadow-black: 3px 3px 0px hsl(240 100% 15%);
+    --shadow-thick: 4px 4px 0px hsl(240 100% 15%);
+    --shadow-deep: 6px 6px 0px hsl(240 100% 15%);
 
     /* Pixel Animations */
     --transition-pixel: all 0.1s steps(4, end);
     --transition-arcade: all 0.2s steps(8, end);
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 120 60% 45%;
+    --sidebar-foreground: 60 100% 95%;
+    --sidebar-primary: 45 100% 50%;
+    --sidebar-primary-foreground: 240 100% 15%;
+    --sidebar-accent: 180 100% 70%;
+    --sidebar-accent-foreground: 240 100% 15%;
+    --sidebar-border: 240 100% 15%;
+    --sidebar-ring: 45 100% 50%;
   }
 
   .dark {
-    /* Dark mode keeps same retro aesthetic but with inverted brightness */
-    --background: 120 100% 4%;
-    --foreground: 120 100% 95%;
-    --primary: 120 100% 60%;
-    --primary-glow: 120 100% 80%;
-    --secondary: 200 100% 70%;
-    --game-success: 120 100% 60%;
-    --game-warning: 45 100% 70%;
-    --game-info: 200 100% 70%;
-    --shadow-neon: 0 0 30px hsl(var(--primary) / 1), 0 0 60px hsl(var(--primary) / 0.6);
+    /* Dark mode uses same bright colors but with different background */
+    --background: 220 60% 30%; /* Dark blue mountains */
+    --foreground: 60 100% 95%;
+    --card: 120 60% 35%; /* Darker green */
+    --primary: 45 100% 60%; /* Brighter yellow for dark mode */
+    --secondary: 0 100% 65%; /* Brighter red */
+    --border: 60 100% 95%; /* White borders in dark mode */
   }
 }
 
@@ -100,8 +90,13 @@
   body {
     @apply bg-background text-foreground font-pixel;
     background-image: 
-      radial-gradient(circle at 25% 25%, hsl(120 100% 50% / 0.1) 0%, transparent 25%),
-      radial-gradient(circle at 75% 75%, hsl(200 100% 60% / 0.1) 0%, transparent 25%);
+      /* Checkered pattern like the template */
+      linear-gradient(45deg, hsl(180 100% 75%) 25%, transparent 25%),
+      linear-gradient(-45deg, hsl(180 100% 75%) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, hsl(180 100% 75%) 75%),
+      linear-gradient(-45deg, transparent 75%, hsl(180 100% 75%) 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
   }
 }
 
@@ -118,31 +113,29 @@
   }
   
   .text-shadow-pixel {
-    text-shadow: 2px 2px 0px hsl(var(--background));
+    text-shadow: 3px 3px 0px hsl(var(--border));
   }
   
   .text-glow {
-    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+    text-shadow: 3px 3px 0px hsl(var(--border));
+  }
+  
+  .text-outline {
+    text-shadow: 
+      -2px -2px 0 hsl(var(--border)),
+      2px -2px 0 hsl(var(--border)),
+      -2px 2px 0 hsl(var(--border)),
+      2px 2px 0 hsl(var(--border));
   }
   
   .pixel-border {
-    border: 2px solid hsl(var(--border));
+    border: 3px solid hsl(var(--border));
     position: relative;
   }
   
-  .pixel-border::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(45deg, 
-      hsl(var(--primary)) 0%, 
-      hsl(var(--secondary)) 50%, 
-      hsl(var(--accent)) 100%);
-    z-index: -1;
-    border-radius: inherit;
+  .pixel-border-thick {
+    border: 4px solid hsl(var(--border));
+    position: relative;
   }
   
   .scanlines {
@@ -160,9 +153,9 @@
     background: repeating-linear-gradient(
       0deg,
       transparent,
-      transparent 2px,
-      hsl(var(--foreground) / 0.03) 2px,
-      hsl(var(--foreground) / 0.03) 4px
+      transparent 3px,
+      hsl(var(--foreground) / 0.05) 3px,
+      hsl(var(--foreground) / 0.05) 6px
     );
     pointer-events: none;
   }

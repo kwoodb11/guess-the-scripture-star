@@ -9,14 +9,14 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-pixel hover:shadow-pixel-deep border-2 border-primary-glow hover:animate-pixel-bounce",
-        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 shadow-pixel border-2 border-destructive",
-        outline: "border-2 border-primary bg-background/90 text-primary hover:bg-primary hover:text-primary-foreground shadow-pixel hover:shadow-pixel-deep",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-pixel border-2 border-secondary",
-        ghost: "hover:bg-accent hover:text-accent-foreground border-2 border-transparent hover:border-accent",
-        link: "text-primary underline-offset-4 hover:underline hover:text-primary-glow",
-        neon: "bg-primary text-primary-foreground animate-neon-glow shadow-neon border-2 border-primary-glow hover:animate-glitch",
-        cyber: "bg-gradient-to-r from-secondary to-accent text-secondary-foreground shadow-pixel border-2 border-accent hover:shadow-neon",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-pixel hover:shadow-pixel-thick border-4 border-border text-outline font-bold",
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 shadow-pixel border-4 border-border text-outline",
+        outline: "border-4 border-border bg-card text-card-foreground hover:bg-card/80 shadow-pixel hover:shadow-pixel-thick text-outline",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-pixel border-4 border-border text-outline",
+        ghost: "hover:bg-accent hover:text-accent-foreground border-4 border-transparent hover:border-border text-outline",
+        link: "text-primary underline-offset-4 hover:underline hover:text-primary-glow text-outline",
+        neon: "bg-primary text-primary-foreground shadow-pixel-deep border-4 border-border hover:shadow-pixel-thick text-outline font-bold",
+        cyber: "bg-gradient-to-r from-secondary to-accent text-secondary-foreground shadow-pixel border-4 border-border text-outline",
       },
       size: {
         default: "h-12 px-6 py-3",

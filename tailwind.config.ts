@@ -70,9 +70,9 @@ export default {
 				sm: '0px'
 			},
 			boxShadow: {
-				'pixel': 'var(--shadow-pixel)',
+				'pixel': 'var(--shadow-black)',
+				'pixel-thick': 'var(--shadow-thick)',
 				'pixel-deep': 'var(--shadow-deep)',
-				'neon': 'var(--shadow-neon)',
 			},
 			keyframes: {
 				'accordion-down': {
