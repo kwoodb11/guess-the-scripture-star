@@ -8,47 +8,47 @@ interface GameHeaderProps {
 
 export const GameHeader = ({ level, totalScore, currentPoints }: GameHeaderProps) => {
   return (
-    <div className="w-full max-w-4xl mx-auto mb-8">
+    <div className="w-full max-w-4xl mx-auto mb-8 scanlines">
       <div className="text-center mb-6">
-        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent mb-2">
-          Guess Who
+        <h1 className="text-3xl md:text-4xl font-pixel text-primary text-glow animate-neon-glow mb-2 text-shadow-pixel">
+          GUESS WHO
         </h1>
-        <p className="text-xl text-muted-foreground">Bible Characters</p>
+        <p className="text-sm md:text-base font-pixel text-secondary text-glow">BIBLE CHARACTERS</p>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="bg-card/80 backdrop-blur-sm rounded-xl p-4 border border-border/50 shadow-gentle">
+        <div className="bg-card border-2 border-primary p-4 shadow-pixel pixel-border">
           <div className="flex items-center gap-3">
-            <div className="p-2 rounded-lg bg-primary/10">
-              <Crown className="w-6 h-6 text-primary" />
+            <div className="p-2 bg-primary text-primary-foreground shadow-pixel">
+              <Crown className="w-6 h-6" />
             </div>
             <div>
-              <p className="text-sm text-muted-foreground">Level</p>
-              <p className="text-2xl font-bold text-foreground">{level}</p>
+              <p className="text-xs font-pixel text-muted-foreground uppercase">LEVEL</p>
+              <p className="text-xl font-pixel text-primary text-glow">{level}</p>
             </div>
           </div>
         </div>
         
-        <div className="bg-card/80 backdrop-blur-sm rounded-xl p-4 border border-border/50 shadow-gentle">
+        <div className="bg-card border-2 border-game-success p-4 shadow-pixel">
           <div className="flex items-center gap-3">
-            <div className="p-2 rounded-lg bg-game-success/10">
-              <Star className="w-6 h-6 text-game-success" />
+            <div className="p-2 bg-game-success text-background shadow-pixel">
+              <Star className="w-6 h-6" />
             </div>
             <div>
-              <p className="text-sm text-muted-foreground">Total Score</p>
-              <p className="text-2xl font-bold text-foreground">{totalScore}</p>
+              <p className="text-xs font-pixel text-muted-foreground uppercase">SCORE</p>
+              <p className="text-xl font-pixel text-game-success text-glow">{totalScore}</p>
             </div>
           </div>
         </div>
         
-        <div className="bg-card/80 backdrop-blur-sm rounded-xl p-4 border border-border/50 shadow-gentle">
+        <div className="bg-card border-2 border-game-warning p-4 shadow-pixel">
           <div className="flex items-center gap-3">
-            <div className="p-2 rounded-lg bg-game-warning/10">
-              <Target className="w-6 h-6 text-game-warning" />
+            <div className="p-2 bg-game-warning text-background shadow-pixel">
+              <Target className="w-6 h-6" />
             </div>
             <div>
-              <p className="text-sm text-muted-foreground">Points Left</p>
-              <p className="text-2xl font-bold text-foreground">{currentPoints}</p>
+              <p className="text-xs font-pixel text-muted-foreground uppercase">POINTS</p>
+              <p className="text-xl font-pixel text-game-warning text-glow">{currentPoints}</p>
             </div>
           </div>
         </div>

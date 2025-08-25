@@ -26,13 +26,13 @@ export const RoundBanner = ({ message, type, visible }: RoundBannerProps) => {
   const getBgColor = () => {
     switch (type) {
       case 'success':
-        return 'bg-game-success/10 border-game-success/30';
+        return 'bg-card border-2 border-game-success shadow-neon';
       case 'error':
-        return 'bg-destructive/10 border-destructive/30';
+        return 'bg-card border-2 border-destructive shadow-pixel';
       case 'info':
-        return 'bg-game-info/10 border-game-info/30';
+        return 'bg-card border-2 border-game-info shadow-pixel';
       default:
-        return 'bg-muted/10 border-border/30';
+        return 'bg-card border-2 border-border shadow-pixel';
     }
   };
 
@@ -40,7 +40,7 @@ export const RoundBanner = ({ message, type, visible }: RoundBannerProps) => {
     <Card className={`w-full max-w-2xl mx-auto p-4 ${getBgColor()} animate-fade-in mb-6`}>
       <div className="flex items-center justify-center gap-3">
         {getIcon()}
-        <p className="text-sm font-medium text-foreground text-center">{message}</p>
+        <p className="text-xs font-pixel text-foreground text-center uppercase">{message}</p>
       </div>
     </Card>
   );

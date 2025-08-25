@@ -11,17 +11,17 @@ interface ClueCardProps {
 
 export const ClueCard = ({ clue, clueNumber, onAnotherClue, isLoading }: ClueCardProps) => {
   return (
-    <Card className="w-full max-w-2xl mx-auto p-8 bg-gradient-to-br from-card/95 to-accent/30 backdrop-blur-sm border-border/50 shadow-gentle animate-fade-in">
+    <Card className="w-full max-w-2xl mx-auto p-6 bg-card border-2 border-primary shadow-pixel scanlines animate-fade-in">
       <div className="text-center space-y-6">
         <div className="flex items-center justify-center gap-3 mb-4">
-          <div className="p-3 rounded-full bg-primary/10 animate-glow-pulse">
-            <Lightbulb className="w-6 h-6 text-primary" />
+          <div className="p-2 bg-primary text-primary-foreground shadow-pixel animate-neon-glow">
+            <Lightbulb className="w-6 h-6" />
           </div>
-          <h2 className="text-2xl font-bold text-foreground">Clue #{clueNumber}</h2>
+          <h2 className="text-lg font-pixel text-primary text-glow uppercase">CLUE #{clueNumber}</h2>
         </div>
         
-        <div className="bg-muted/50 rounded-lg p-6 border border-border/30">
-          <p className="text-lg leading-relaxed text-foreground font-medium">
+        <div className="bg-muted border-2 border-secondary p-6 shadow-pixel">
+          <p className="text-sm font-pixel leading-relaxed text-foreground">
             {clue}
           </p>
         </div>
@@ -31,10 +31,10 @@ export const ClueCard = ({ clue, clueNumber, onAnotherClue, isLoading }: ClueCar
           variant="outline"
           size="lg"
           disabled={isLoading}
-          className="group border-game-warning/30 text-game-warning hover:bg-game-warning/10 hover:border-game-warning/50"
+          className="font-pixel"
         >
-          <Minus className="w-4 h-4 mr-2 group-hover:animate-pulse" />
-          Another Clue (-10 pts)
+          <Minus className="w-4 h-4 mr-2" />
+          ANOTHER CLUE (-10 PTS)
         </Button>
       </div>
     </Card>
